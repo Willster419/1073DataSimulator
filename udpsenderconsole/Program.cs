@@ -11,15 +11,22 @@ namespace ConsoleSender
     {
         static void Main(string[] args)
         {
-            byte[] data = new byte[1024];
-            string input;
+            string robotSim;
             IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1165);
             Socket server = new Socket(AddressFamily.InterNetwork,SocketType.Dgram, ProtocolType.Udp);
             EndPoint Remote = (EndPoint)ipep;
+
+            string consoleSim;
+            IPEndPoint console = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1166);
+            Socket consoleServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            EndPoint RemoteConsole = (EndPoint)console;
             while (true)
             {
-                input = "This is a test string*****************************************";
-                server.SendTo(Encoding.ASCII.GetBytes(input), Remote);
+                robotSim= "This is a test string*****************************************";
+                server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
+                //Console.WriteLine(input);
+                consoleSim = "This is netconsole********************************";
+                consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
                 //Console.WriteLine(input);
             }
         }
