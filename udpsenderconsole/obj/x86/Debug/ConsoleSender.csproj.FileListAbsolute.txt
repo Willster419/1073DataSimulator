@@ -5,3 +5,8 @@ c:\users\willstah\workspace\visual studio 2010\Projects\ConsoleApplication2\Cons
 c:\users\willstah\workspace\visual studio 2010\Projects\ConsoleApplication2\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.pdb
 C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.exe
 C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\ConsoleApplication2\obj\x86\Debug\ConsoleApplication2.pdb
+C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\udpsenderconsole\obj\x86\Debug\ConsoleApplication2.exe
+C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\udpsenderconsole\obj\x86\Debug\ConsoleApplication2.pdb
+C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\udpsenderconsole\bin\Debug\ConsoleApplication2.exe
+C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\udpsenderconsole\bin\Debug\ConsoleApplication2.pdb
+C:\Users\Willstah\workspace\visual studio 2010\Projects\frcteam1073-electrical.1073updsenderconsole\udpsenderconsole\obj\x86\Debug\ResolveAssemblyReference.cache
