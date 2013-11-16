@@ -28,6 +28,7 @@ namespace ConsoleSender
                 consoleSim = "This is netconsole********************************";
                 consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
                 //Console.WriteLine(input);
+            
             }
         }
     }
