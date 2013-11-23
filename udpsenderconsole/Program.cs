@@ -22,13 +22,12 @@ namespace ConsoleSender
             EndPoint RemoteConsole = (EndPoint)console;
             while (true)
             {
-                robotSim= "This is a test string*****************************************";
+                robotSim= "This is a test string";
                 server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
                 //Console.WriteLine(input);
-                consoleSim = "This is netconsole********************************";
+                consoleSim = "13.5847,1.1111,2.2222,3.3333,4.4444";
                 consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
                 //Console.WriteLine(input);
-            
             }
         }
     }
