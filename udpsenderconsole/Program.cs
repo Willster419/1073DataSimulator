@@ -22,17 +22,17 @@ namespace ConsoleSender
             EndPoint RemoteConsole = (EndPoint)console;
             while (true)
             {
-                    robotSim = "13.5847,4,1.1111,2.2222,3.3333,4.4444";
+                robotSim = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA13.58474 1.111111 2.222222 3.333333 4.444444 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 1.111111 9001";
                     server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
                     //Console.WriteLine(input);
-                    consoleSim = "This is a test string";
-                    consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
+                    //consoleSim = "This is a test string";
+                    //consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
                     //Console.WriteLine(input);
-                    robotSim = "12.3953,4,1.4893,2.5935,2.3343,1.440954";
-                    server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
+                   // robotSim = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA12.39534 1.489334 2.593567 2.334336 1.440954";
+                    //server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
                     //Console.WriteLine(input);
-                    consoleSim = "This is a test string lol stuff";
-                    consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
+                    //consoleSim = "This is a test string lol stuff";
+                    //consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
                     //Console.WriteLine(input);
             }
         }
