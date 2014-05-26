@@ -11,29 +11,28 @@ namespace ConsoleSender
     {
         static void Main(string[] args)
         {
-            string robotSim;
+            string robotSim1;
+            string robotSim2;
             IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1165);
             Socket server = new Socket(AddressFamily.InterNetwork,SocketType.Dgram, ProtocolType.Udp);
             EndPoint Remote = (EndPoint)ipep;
-
             string consoleSim;
-            IPEndPoint console = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 1166);
+            IPEndPoint console = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 6666);
             Socket consoleServer = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             EndPoint RemoteConsole = (EndPoint)console;
+            int count = 0;
             while (true)
             {
-                robotSim = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,13.58 ,1.11 ,2.22 ,3.33 ,4.44 ,1     ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1.11 ,1     ,1     ,1.11 ,1.11 ,1.11 ,9001";
-                    server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
-                    //Console.WriteLine(input);
-                    //consoleSim = "This is a test string";
-                    //consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
-                    //Console.WriteLine(input);
-                   // robotSim = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA12.39534 1.489334 2.593567 2.334336 1.440954";
-                    //server.SendTo(Encoding.ASCII.GetBytes(robotSim), Remote);
-                    //Console.WriteLine(input);
-                    //consoleSim = "This is a test string lol stuff";
-                    //consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
-                    //Console.WriteLine(input);
+                robotSim1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1,13.58,1.11,0.22,0.33,0.24,1,1,1,1,1,1,1,1.11,1.11,1.11,1.11,1.11,1,1,2,1,250,1.11,110,1.11,1.11,500,5,69,1";
+                robotSim2 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1,13.25,1.11,-0.22,-0.33,-0.24,0,0,0,0,0,0,0,1.11,1.11,1.11,1.11,1.11,1,1,2,1,250,1.11,110,1.11,1.11,500,5,69,1";
+                server.SendTo(Encoding.ASCII.GetBytes(robotSim1), Remote);
+                System.Threading.Thread.Sleep(1);
+                server.SendTo(Encoding.ASCII.GetBytes(robotSim2), Remote);
+                //Console.WriteLine(input);
+                consoleSim = "This is a test string "+count+++"\n";
+                consoleServer.SendTo(Encoding.ASCII.GetBytes(consoleSim), RemoteConsole);
+                //Console.WriteLine(input);
+                if (count == int.MaxValue) count = 0;
             }
         }
     }
